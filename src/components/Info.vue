@@ -12,20 +12,23 @@
     <li>Angular</li>
 </ul>
 <p>Para Acessar meu porfólio <a v-bind:href="meu_link" target="_blank">Basta clicar aqui</a></p>
-    </div>
+<Picture/>   
+</div>
     </template>
     <script >
-export default{
-name:'Info',
-data() {
-    return {
-        esta_trabalhando:false,
-        mostrar_email:true,
-        email:'nickcastela@hotmail.com',
-        meu_link:'https://google.com'
-    }
-},
+import Picture from './Picture.vue';
 
+export default{
+    name: 'Info',
+    data() {
+        return {
+            esta_trabalhando: false,
+            mostrar_email: true,
+            email: 'nickcastela@hotmail.com',
+            meu_link: 'https://google.com'
+        };
+    },
+    components: { Picture }
 }
 
 </script>
