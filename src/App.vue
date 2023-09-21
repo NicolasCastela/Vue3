@@ -6,7 +6,7 @@
     <PrimeiroComponente/>
     <LifeCycle/>
     <Pessoa/>
-    <Form/>
+    
   </div>
 </template>
 
