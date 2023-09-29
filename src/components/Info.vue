@@ -1,6 +1,6 @@
 <template>
     <div>
-      
+   
 <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
 <p v-else="">Estou em busca de novas Oportunidades</p>
 <p>Utilizo as seguintes tecnologias para backend:</p>
@@ -9,7 +9,9 @@
         {{ mostralista}}</li>
 
 </ul>
-<p> Utilizo as seguintes Tecnologias para front-end</p>
+<p>ola {{ textoPR }}</p>
+<p>ola {{ mostrarPR }}</p>
+
 <ul>
     <li v-for="tec in frontend_tec"  :key="tec.id">
         {{ tec.language }}
@@ -29,11 +31,17 @@ import Picture from './Picture.vue';
 
 export default{
     name: 'Info',
+    props:{
+        email: String,
+        esta_trabalhando: Boolean,
+        textoPR: String,
+        mostrarPR:String
+        },
     data() {
         return {
-            esta_trabalhando: false,
+         
             mostrar_email: false,
-            email: 'nickcastela@hotmail.com',
+           
             meu_link: 'https://google.com',
             textobotao:'Mostrar E-mail',
             backend_tec:['JavaScript', 'PHP', 'Angular'],
